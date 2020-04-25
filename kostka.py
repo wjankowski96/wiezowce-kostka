@@ -1,4 +1,4 @@
-cdimport numpy as np
+import numpy as np
 
 np.random.seed(123)
 random_walk = [0]
@@ -18,3 +18,8 @@ for x in range(100) :
     random_walk.append(step)
 
 print(random_walk)
+
+import matplotlib.pyplot as plt
+
+plt.plot(random_walk)
+plt.show()
