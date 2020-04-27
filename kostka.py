@@ -3,8 +3,6 @@ import numpy as np
 np.random.seed(123)
 all_walks = []
 for i in range(10):
-
-    # Code from before
     random_walk = [0]
     for x in range(100) :
         step = random_walk[-1]
@@ -18,14 +16,21 @@ for i in range(10):
             step = step + np.random.randint(1,7)
         random_walk.append(step)
 
-    # Append random_walk to all_walks
+    
     all_walks.append(random_walk)
 
-# Print all_walks
+
 print(all_walks)
 
 import matplotlib.pyplot as plt
+np_aw = np.array(all_walks)
 
-plt.plot(all_walks)
-#plt.hist(all_walks, bins=10)
+plt.plot(np_aw)
+plt.show()
+
+plt.clf()
+
+np_aw_t = np.transpose(np_aw)
+
+plt.plot(np_aw_t)
 plt.show()
